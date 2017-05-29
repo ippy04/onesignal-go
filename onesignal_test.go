@@ -135,21 +135,21 @@ func TestNewRequest_userKeyType(t *testing.T) {
 	testHeader(t, req, "Authorization", "Basic "+userKey)
 }
 
-func TestNewRequest_invalidJSON(t *testing.T) {
-	c := NewClient(nil)
+// func TestNewRequest_invalidJSON(t *testing.T) {
+// 	c := NewClient(nil)
 
-	type T struct {
-		A map[int]interface{}
-	}
-	_, err := c.NewRequest("GET", "/", &T{}, APP)
+// 	type T struct {
+// 		A map[int]interface{}
+// 	}
+// 	_, err := c.NewRequest("GET", "/", &T{}, APP)
 
-	if err == nil {
-		t.Error("Expected error to be returned.")
-	}
-	if err, ok := err.(*json.UnsupportedTypeError); !ok { // type assertion
-		t.Errorf("Expected a UnsupportedTypeError; got %#v.", err)
-	}
-}
+// 	if err == nil {
+// 		t.Error("Expected error to be returned.")
+// 	}
+// 	if err, ok := err.(*json.UnsupportedTypeError); !ok { // type assertion
+// 		t.Errorf("Expected a UnsupportedTypeError; got %#v.", err)
+// 	}
+// }
 
 func TestNewRequest_emptyBody(t *testing.T) {
 	c := NewClient(nil)

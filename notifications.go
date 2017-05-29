@@ -25,6 +25,7 @@ type Notification struct {
 	Data       interface{}       `json:"data"`
 	Canceled   bool              `json:"canceled"`
 	Headings   map[string]string `json:"headings"`
+	SubTitle   map[string]string `json:"subtitle"`
 	Contents   map[string]string `json:"contents"`
 }
 
@@ -32,6 +33,7 @@ type Notification struct {
 type NotificationRequest struct {
 	AppID                  string            `json:"app_id"`
 	Contents               map[string]string `json:"contents,omitempty"`
+	SubTitle               map[string]string `json:"subtitle,omitempty"`
 	Headings               map[string]string `json:"headings,omitempty"`
 	IsIOS                  bool              `json:"isIos,omitempty"`
 	IsAndroid              bool              `json:"isAndroid,omitempty"`

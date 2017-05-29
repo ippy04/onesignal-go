@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/tbalthazar/onesignal-go/testhelper"
+	"github.com/ippy04/onesignal-go/testhelper"
 )
 
 var sampleNotification1 = &Notification{
@@ -24,6 +24,10 @@ var sampleNotification1 = &Notification{
 	Headings: map[string]string{
 		"en": "English and default langauge heading",
 		"es": "Spanish language heading",
+	},
+	SubTitle: map[string]string{
+		"en": "English and default langauge subtitle",
+		"es": "Spanish language subtitle",
 	},
 	Contents: map[string]string{
 		"en": "English and default content",
@@ -47,6 +51,10 @@ var sampleNotification2 = &Notification{
 	Headings: map[string]string{
 		"en": "English and default langauge heading",
 		"es": "Spanish language heading",
+	},
+	SubTitle: map[string]string{
+		"en": "English and default langauge subtitle",
+		"es": "Spanish language subtitle",
 	},
 	Contents: map[string]string{
 		"en": "English and default content",
